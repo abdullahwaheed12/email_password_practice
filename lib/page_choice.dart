@@ -23,7 +23,6 @@ class PageChoice extends StatelessWidget {
       Widget page;
       User? user = FirebaseAuth.instance.currentUser;
       if (user == null) {
-        CustomSnackBar.showSnackBar('Signing in ', context);
         page = const SignIn();
       } else {
         page = Home(email: user.email!, name: user.displayName!);

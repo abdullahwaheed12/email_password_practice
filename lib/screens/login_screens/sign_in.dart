@@ -54,6 +54,10 @@ class _SignInState extends State<SignIn> {
           CustomSnackBar.showSnackBar('user disable', context);
         }
       }
+      User user = firebaseAuth.currentUser!;
+      if (user != null && !user.emailVerified) {
+        await user.sendEmailVerification();
+      }
     }
 
     return Scaffold(

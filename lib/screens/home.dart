@@ -28,16 +28,19 @@ class _HomeState extends State<Home> {
                 case 'Logout':
                   {
                     await firebaseAuth.signOut();
-                    firebaseAuth.authStateChanges().listen((User? user) {
-                      if (user == null) {
-                        NavigationTo.pushAndRemoveUntil(
-                            const SignIn(), context);
-                        CustomSnackBar.showSnackBar('user is logout', context);
-                      } else {
-                        CustomSnackBar.showSnackBar(
-                            'User is signed in', context);
-                      }
-                    });
+                    firebaseAuth.authStateChanges().listen(
+                      (User? user) {
+                        if (user == null) {
+                          NavigationTo.pushAndRemoveUntil(
+                              const SignIn(), context);
+                          CustomSnackBar.showSnackBar(
+                              'user is logout', context);
+                        } else {
+                          CustomSnackBar.showSnackBar(
+                              'User is signed in', context);
+                        }
+                      },
+                    );
                     CustomSnackBar.showSnackBar('Click logout', context);
                     break;
                   }

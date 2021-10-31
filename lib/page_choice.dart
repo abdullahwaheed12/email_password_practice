@@ -1,4 +1,3 @@
-import 'package:email_password_practice/screens/login_screens/hello.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +5,6 @@ import 'screens/home.dart';
 import 'screens/loading.dart';
 import 'screens/login_screens/sign_in.dart';
 import 'screens/something_wrong.dart';
-import 'values/custom_snack_bar.dart';
 
 class PageChoice extends StatelessWidget {
   const PageChoice({Key? key, required this.snapshot}) : super(key: key);

@@ -1,4 +1,5 @@
 import 'package:email_password_practice/routes/navigation.dart';
+import 'package:email_password_practice/screens/forget_password.dart';
 import 'package:email_password_practice/screens/home.dart';
 import 'package:email_password_practice/screens/login_screens/sign_up.dart';
 import 'package:email_password_practice/values/custom_snack_bar.dart';
@@ -55,7 +56,7 @@ class _SignInState extends State<SignIn> {
         }
       }
       User user = firebaseAuth.currentUser!;
-      if (user != null && !user.emailVerified) {
+      if (!user.emailVerified) {
         await user.sendEmailVerification();
       }
     }
@@ -133,7 +134,9 @@ class _SignInState extends State<SignIn> {
   ///
   Widget forgetPassword() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        NavigationTo.push(const ForgetPasswrod(), context);
+      },
       child: Text(
         StringConst.FORGET_PASSWORD,
         style: Styles.customTextStyle2()

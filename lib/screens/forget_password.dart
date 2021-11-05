@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:email_password_practice/routes/navigation.dart';
 import 'package:email_password_practice/screens/home.dart';
 import 'package:email_password_practice/widgets/text_field.dart';

@@ -5,13 +5,13 @@ class CustomButton extends StatelessWidget {
       {Key? key,
       required this.bgColor,
       required this.text,
-      required this.onPressed,
+      this.onPressed,
       required this.size})
       : super(key: key);
   final String text;
   final Color bgColor;
   final Size size;
-  final void Function() onPressed;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(

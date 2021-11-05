@@ -1,13 +1,14 @@
 import 'dart:ui';
 
 import 'package:email_password_practice/routes/navigation.dart';
-import 'package:email_password_practice/screens/login_screens/sign_in.dart';
-import 'package:email_password_practice/screens/login_screens/sign_up.dart';
 import 'package:email_password_practice/values/decoration.dart';
 import 'package:email_password_practice/values/string.dart';
 import 'package:email_password_practice/widgets/button.dart';
 import 'package:email_password_practice/widgets/spacer.dart';
 import 'package:flutter/material.dart';
+
+import 'sign_in.dart';
+import 'sign_up.dart';
 
 class Hello extends StatefulWidget {
   const Hello({Key? key}) : super(key: key);

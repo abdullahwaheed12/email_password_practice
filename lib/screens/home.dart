@@ -3,7 +3,7 @@ import 'package:email_password_practice/values/custom_snack_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'login_screens/sign_in.dart';
+import 'sign_in_screens/sign_in.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key, required this.email, required this.name})
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
                         },
                       );
                     } on FirebaseAuthException catch (e) {
-                      CustomSnackBar.showSnackBar(e.message??e.code, context);
+                      CustomSnackBar.showSnackBar(e.message ?? e.code, context);
                     }
 
                     CustomSnackBar.showSnackBar('Click logout', context);

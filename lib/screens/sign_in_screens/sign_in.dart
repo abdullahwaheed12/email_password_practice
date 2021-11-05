@@ -1,7 +1,6 @@
 import 'package:email_password_practice/routes/navigation.dart';
 import 'package:email_password_practice/screens/forget_password.dart';
 import 'package:email_password_practice/screens/home.dart';
-import 'package:email_password_practice/screens/login_screens/sign_up.dart';
 import 'package:email_password_practice/values/custom_snack_bar.dart';
 import 'package:email_password_practice/values/decoration.dart';
 import 'package:email_password_practice/values/sizes.dart';
@@ -13,6 +12,8 @@ import 'package:email_password_practice/widgets/text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'sign_up.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -118,7 +119,7 @@ class _SignInState extends State<SignIn> {
                 size: size,
                 heightFactor: 0.02,
               ),
-              forgetPassword(),
+              // forgetPassword(),
               MySpacer(
                 size: size,
                 heightFactor: 0.02,

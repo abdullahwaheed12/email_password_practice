@@ -1,8 +1,8 @@
+import 'package:email_password_practice/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
-import 'page_choice.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +34,9 @@ class _MyAppState extends State<MyApp> {
       future: _initialization,
       builder: (context, snapshot) {
         return MaterialApp(
-          home: PageChoice(snapshot: snapshot),
+          home: SplashScreen(
+            snapshot: snapshot,
+          ),
         );
       },
     );

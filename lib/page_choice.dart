@@ -1,9 +1,9 @@
+import 'package:email_password_practice/screens/user_selection.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home.dart';
 import 'screens/loading.dart';
-import 'screens/login_screens/sign_in.dart';
 import 'screens/something_wrong.dart';
 
 class PageChoice extends StatelessWidget {
@@ -21,9 +21,9 @@ class PageChoice extends StatelessWidget {
       Widget page;
       User? user = FirebaseAuth.instance.currentUser;
       if (user == null) {
-        page = const SignIn();
+        page = const UserSelection();
       } else {
-        page = Home(email: user.email!, name: user.displayName!);
+        page = Home(email: user.email!, name: '');
       }
       return page;
     }
